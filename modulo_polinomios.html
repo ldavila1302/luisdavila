@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Polinomios: fundamentos esenciales</title>
+<style>
+:root{--bg:#fff;--primary:#00497a;--accent:#e3f2fd;--text:#212121;--heading:#0d47a1;}
+body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+header{background:var(--accent);padding:2rem 1rem;text-align:center;}
+header h1{margin:.2rem 0;font-size:2rem;color:var(--heading);}
+header h2{margin:.2rem 0;font-size:1.25rem;color:var(--primary);}
+nav{background:#fafafa;padding:.5rem;border-top:1px solid #ddd;border-bottom:1px solid #ddd;}
+nav ul{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:0;padding:0;list-style:none;}
+nav a{color:var(--primary);text-decoration:none;font-weight:600;font-size:.9rem;}
+main{padding:1rem;max-width:900px;margin:auto;}
+section{margin-bottom:2rem;}
+section h2{color:var(--heading);margin-top:0;}
+details{margin:.5rem 0;padding:.5rem;border-left:3px solid var(--primary);background:#f7f9fc;}
+summary{font-weight:600;cursor:pointer;}
+.question{margin:1rem 0;padding:1rem;border:1px solid #ccc;border-radius:6px;background:#fefefe;}
+.question legend{font-weight:600;}
+footer{background:var(--accent);padding:1rem;text-align:center;font-size:.9rem;}
+</style>
+</head>
+<body>
+<header>
+<h1>Polinomios: fundamentos esenciales</h1>
+<h2>Del concepto a la evaluación numérica</h2>
+<p>¡Bienvenido! Prepárate para dominar los polinomios: descubrirás su naturaleza, aprenderás a clasificarlos, identificarás su grado y los evaluarás con precisión.</p>
+</header>
+<nav aria-label="Navegación del módulo">
+<ul>
+<li><a href="#objetivos">Objetivos</a></li>
+<li><a href="#engancha">¡Engánchate!</a></li>
+<li><a href="#explora">Explora</a></li>
+<li><a href="#demuestra">Demuestra</a></li>
+<li><a href="#practica">Practica</a></li>
+<li><a href="#reflexiona">Reflexiona</a></li>
+<li><a href="#desafio">Desafío</a></li>
+<li><a href="#recursos">Recursos</a></li>
+</ul>
+</nav>
+<main>
+<section id="objetivos">
+<h2>¿Qué aprenderás?</h2>
+<ul>
+<li>Explicar con tus propias palabras qué es un polinomio y cómo se representa.</li>
+<li>Clasificar polinomios por número de términos y por grado.</li>
+<li>Determinar grado absoluto y relativo de polinomios dados.</li>
+<li>Calcular el valor numérico de un polinomio para valores concretos de la variable.</li>
+</ul>
+</section>
+<section id="explora">
+<h2>Explora los conceptos</h2>
+<details open><summary>Definición de polinomio</summary>
+<p>Un <strong>polinomio</strong> es una expresión algebraica formada por la suma (o resta) de monomios. Ejemplo: \(P(x)=4x^{3}-2x+7\).</p>
+</details>
+<details><summary>Clasificación de polinomios</summary>
+<ul><li>Monomio: \(7x^2\)</li><li>Binomio: \(x^2-9\)</li><li>Trinomio: \(3x^2+2x-5\)</li><li>Polinomio de n términos: \(4x^3-2x+7\)</li></ul>
+</details>
+<details><summary>Grado absoluto y relativo</summary>
+<p>El grado absoluto es el exponente más alto. El grado relativo se refiere a una variable específica.</p>
+</details>
+<details><summary>Valor numérico</summary>
+<p>Para hallar \(P(a)\) sustituye \(x=a\).</p>
+</details>
+</section>
+<section id="demuestra">
+<h2>Demuestra y visualiza</h2>
+<iframe src="https://www.geogebra.org/material/iframe/id/zdqdtpdv/width/800/height/450/border/888888/rc/false/ai/true" width="100%" height="450" loading="lazy" title="Applet GeoGebra: Valor numérico de un polinomio"></iframe>
+</section>
+<section id="practica">
+<h2>Práctica guiada</h2>
+<form class="question"><fieldset><legend>1. Grado absoluto de \(7x^5-3x^2+8\)</legend>
+<label><input type="radio" name="q1">2</label><br>
+<label><input type="radio" name="q1">3</label><br>
+<label><input type="radio" name="q1" data-correct="true">5</label><br>
+<label><input type="radio" name="q1">7</label></fieldset></form>
+</section>
+<section id="recursos">
+<h2>Recursos adicionales</h2>
+<ul>
+<li><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Video‑tutorial “Polinomios en 10 minutos”</a></li>
+<li><a href="https://www.geogebra.org/m/axw8nvyq" target="_blank">Applet GeoGebra “Grado de polinomios”</a></li>
+</ul>
+</section>
+</main>
+<footer><p>© 2025 Luis Dávila · CC BY‑SA 4.0</p></footer>
+<script>
+document.querySelectorAll('.question').forEach(f=>{
+ f.addEventListener('change',()=>{
+  const c=f.querySelector('[data-correct]');let m=f.querySelector('.msg');
+  if(!m){m=document.createElement('p');m.className='msg';m.style.fontWeight='600';f.appendChild(m);}
+  if(c.checked){m.textContent='✅ ¡Correcto!';m.style.color='green';}
+  else{m.textContent='❌ Intenta de nuevo';m.style.color='red';}
+ });
+});
+</script>
+</body>
+</html>
